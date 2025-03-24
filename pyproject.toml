@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "kompass-scraper"
+version = "0.1.0"
+description = "Scraper of Companies on Kompass"
+authors = ["Vincent Reau"]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<=3.12.3"
+python-dotenv = "1.0.0"
+scrapy = "^2.12.0"
+ipython = "^9.0.2"
+mysql = "^0.0.3"
+mysql-connector-python = "^9.2.0"
+scrapeops-scrapy-proxy-sdk = "^1.0"
+scrapeops-scrapy = "^0.5.6"
+
+[tool.pyright]
+useLibraryCodeForTypes = true
+exclude = [".cache"]
+
+[tool.ruff]
+select = ['E', 'W', 'F', 'I', 'B', 'C4', 'ARG', 'SIM']
+ignore = ['W291', 'W292', 'W293']
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
